@@ -43,6 +43,7 @@ class App extends React.Component<any, any> {
 						<img src="https://s3.amazonaws.com/freecodecamp/freecodecamp_logo.svg" id="fcc-logo"/>
 					</a>
 				</div>
+				<div className="row" id="row-title">Leaderboard</div>
 				<Leaderboard 
 					topRecentCampers={this.state.topRecentCampers}
 					topAlltimeCampers={this.state.topAlltimeCampers} />
@@ -56,21 +57,30 @@ class Leaderboard extends React.Component<any, any> {
 	displayCampers() {
 		let recentCampers = this.props.topRecentCampers.map((camper, index) => {
 			return (
-				<div>
-					{camper.username}
-				</div>
+				<tr key={index}>
+					<td>{index+1}</td>
+					<td><img src={camper.img} className="camper-img" /><span className="username">{camper.username}</span></td>
+					<td>{camper.recent}</td>
+					<td>{camper.alltime}</td>
+				</tr>
 			);
 		});
-		return <div>{recentCampers}</div>
+		return <tbody>{recentCampers}</tbody>
 	}
 	
 	render() {
 		return (
-			<div id="table-wrapper">
-				<div className="row" id="row-title">Leaderboard</div>
-				<div className="row" id="row-category"></div>
+			<table id="table-wrapper">
+				<thead>
+					<tr>
+						<td>#</td>
+						<td>Camper</td>
+						<td>Points in last 30 days</td>
+						<td>All time points</td>
+					</tr>
+				</thead>
 				{this.displayCampers()}
-			</div>
+			</table>
 		);
 	}
 }

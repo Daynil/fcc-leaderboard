@@ -14,21 +14,39 @@ $color-green-dark: hsl(120, 100%, 5%);
 			height: 40px;
 		}
 	}
+	#row-title {
+		background-color: $color-green;
+		text-align: center;
+		color: aliceblue;
+		font: normal 30px 'Open Sans';
+		position: relative;
+		top: 50px;
+		width: 60%;
+		margin: 0 auto;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+	}
 	#table-wrapper {
 		margin: 0 auto;
 		position: relative;
 		top: 50px;
 		width: 60%;
-		border-top-left-radius: 10px;
-		border-top-right-radius: 10px;
+		margin-bottom: 60px;
 		overflow-x: hidden;
-		background-color: gray;
-		height: 82%;
-		#row-title {
-			background-color: $color-green;
-			text-align: center;
-			color: aliceblue;
-			font: normal 30px 'Open Sans';
+		padding: 10px 20px 15px 20px;
+		font: normal 20px 'Lato';
+		thead td {
+			font-weight: bold;
+		}
+		tbody {
+			overflow: auto;
+			.camper-img {
+				width: 50px;
+			}
+			.username {
+				position: relative;
+				bottom: 16px;
+			}
 		}
 	}
 }
