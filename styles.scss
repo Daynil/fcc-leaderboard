@@ -3,6 +3,7 @@ $color-green-border: hsl(120, 100%, 15%);
 $color-green-dark: hsl(120, 100%, 5%);
 
 #page-wrapper {
+	height: 100vh;
 	#header {
 		background-color: $color-green;
 		#fcc-logo {
@@ -20,9 +21,9 @@ $color-green-dark: hsl(120, 100%, 5%);
 		width: 60%;
 		border-top-left-radius: 10px;
 		border-top-right-radius: 10px;
-		overflow: hidden;
+		overflow-x: hidden;
 		background-color: gray;
-		height: 800px;
+		height: 82%;
 		#row-title {
 			background-color: $color-green;
 			text-align: center;
