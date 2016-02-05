@@ -1,6 +1,9 @@
 $color-green: hsl(120, 100%, 20%);
+$color-green-light: hsl(120, 100%, 30%);
+$color-green-clear: hsla(120, 100%, 20%, 0.2);
 $color-green-border: hsl(120, 100%, 15%);
 $color-green-dark: hsl(120, 100%, 5%);
+$color-gray: hsl(0, 0%, 80%);
 
 #page-wrapper {
 	height: 100vh;
@@ -25,6 +28,24 @@ $color-green-dark: hsl(120, 100%, 5%);
 		margin: 0 auto;
 		border-top-left-radius: 10px;
 		border-top-right-radius: 10px;
+		#sorting {
+			float: right;
+			font-size: 15px;
+			position: relative;
+			top: 9px;
+			right: 16px;
+		}
+		#recent {
+			position: relative;
+    		right: 12px;
+		}
+		.selected {
+			text-decoration: underline;
+			cursor: pointer;
+		}
+		.unselected {
+			cursor: pointer;
+		}
 	}
 	#table-wrapper {
 		margin: 0 auto;
@@ -33,19 +54,46 @@ $color-green-dark: hsl(120, 100%, 5%);
 		width: 60%;
 		margin-bottom: 60px;
 		overflow-x: hidden;
+		border-left: 1px solid $color-green;
+		border-right: 1px solid $color-green;
+		border-bottom: 1px solid $color-green;
 		padding: 10px 20px 15px 20px;
 		font: normal 20px 'Lato';
+		.sorting-col {
+			cursor: pointer;
+		}
 		thead td {
 			font-weight: bold;
+			padding: 5px;
+		}
+		i {
+			position: relative;
+			bottom: 3px;
+			left: 2px;
 		}
 		tbody {
 			overflow: auto;
+			.stripe-custom {
+				background-color: $color-green-light;
+			}
 			.camper-img {
 				width: 50px;
 			}
 			.username {
 				position: relative;
 				bottom: 16px;
+				left: 4px;
+				color: $color-green;
+				cursor: pointer;
+				text-decoration: none;
+				transition: 0.2s;
+				&:hover {
+					color: $color-green-light;
+					text-decoration: underline;
+				}
+			}
+			td {
+				padding: 5px;
 			}
 		}
 	}
