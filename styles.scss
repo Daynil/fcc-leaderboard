@@ -9,6 +9,10 @@ $color-gray: hsl(0, 0%, 80%);
 	height: 100vh;
 	#header {
 		background-color: $color-green;
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		flex-wrap: wrap;
 		#fcc-logo {
 			margin-left: 50px;
 			padding-top: 6px;
@@ -97,4 +101,30 @@ $color-gray: hsl(0, 0%, 80%);
 			}
 		}
 	}
+}
+
+#foot {
+    font-family: 'Lato';
+    font-size: 18px;
+    color: hsl(208, 100%, 97%);
+    position: relative;
+    right: 15px;
+    top: 11px;
+}
+
+#foot i, #foot a {
+	color: springgreen;
+	transition: 0.3s;
+	text-decoration: none;
+}
+
+#foot a:hover, #gh-link:hover i {
+	color: aliceblue;
+	text-decoration: none;
+}
+
+#foot i {
+	position: relative;
+    right: 5px;
+    bottom: 1px;
 }

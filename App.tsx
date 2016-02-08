@@ -53,6 +53,12 @@ class App extends React.Component<any, any> {
 					<a href="http://www.freecodecamp.com/">
 						<img src="https://s3.amazonaws.com/freecodecamp/freecodecamp_logo.svg" id="fcc-logo"/>
 					</a>
+					<div id="foot">
+						<a id="gh-link" href="https://github.com/Daynil/fcc-leaderboard">
+						<i className="fa fa-github-square fa-lg"></i>
+						</a>
+						Created by <a href="https://github.com/Daynil/">Daynil</a> for <a href="http://www.freecodecamp.com/">FCC</a>
+					</div>
 				</div>
 				<div className="row" id="row-title">
 					Leaderboard
