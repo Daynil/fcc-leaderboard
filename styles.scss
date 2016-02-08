@@ -10,11 +10,15 @@ $color-gray: hsl(0, 0%, 80%);
 	#header {
 		background-color: $color-green;
 		display: flex;
+		justify-content: center;
+		min-width: 376px;
 		width: 100%;
-		justify-content: space-between;
 		flex-wrap: wrap;
-		#fcc-logo {
+		#logo-link {
+			flex: 1;
 			margin-left: 50px;
+		}
+		#fcc-logo {
 			padding-top: 6px;
 			display: inline-block;
 			width: 269px;
@@ -26,18 +30,24 @@ $color-gray: hsl(0, 0%, 80%);
 		text-align: center;
 		color: aliceblue;
 		font: normal 30px 'Open Sans';
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
 		position: relative;
 		top: 50px;
+		min-width: 376px;
 		width: 60%;
 		margin: 0 auto;
 		border-top-left-radius: 10px;
 		border-top-right-radius: 10px;
+		#leaderboard-title {
+			flex: 1;
+			text-align: center;
+		}
 		#sorting {
 			float: right;
 			font-size: 15px;
-			position: relative;
-			top: 9px;
-			right: 16px;
+			padding: 10px;
 		}
 		#recent {
 			position: relative;
@@ -107,9 +117,7 @@ $color-gray: hsl(0, 0%, 80%);
     font-family: 'Lato';
     font-size: 18px;
     color: hsl(208, 100%, 97%);
-    position: relative;
-    right: 15px;
-    top: 11px;
+    padding: 12px;
 }
 
 #foot i, #foot a {

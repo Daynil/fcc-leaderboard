@@ -50,7 +50,7 @@ class App extends React.Component<any, any> {
 		return (
 			<div id="page-wrapper">
 				<div id="header">
-					<a href="http://www.freecodecamp.com/">
+					<a href="http://www.freecodecamp.com/" id="logo-link">
 						<img src="https://s3.amazonaws.com/freecodecamp/freecodecamp_logo.svg" id="fcc-logo"/>
 					</a>
 					<div id="foot">
@@ -61,7 +61,7 @@ class App extends React.Component<any, any> {
 					</div>
 				</div>
 				<div className="row" id="row-title">
-					Leaderboard
+					<span id="leaderboard-title">Leaderboard</span>
 					<span id="sorting">
 						<span className={this.state.sorting.recent ? 'selected' : 'unselected'} id="recent"
 							onClick={() => this.changeSort('recent')}>Recent</span>
